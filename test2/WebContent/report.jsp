@@ -29,20 +29,13 @@
 							<li><a href="naturalDisaster.jsp">자연재난</a></li>
 							<li><a href="socialDisaster.jsp">사회재난</a></li>
 							<li><a href="quiz.jsp">퀴즈</a></li>
-							<li>
-<%
-if (session.getAttribute("sessionId") != null) {
-%>
-			<a href="board/list.jsp" >게시판</a>
-<%
-			} else {
-%>
-			<a onclick="if(confirm('로그인을 해야 게시판을 이용 할 수 있습니다.')){location.href='LoginForm.jsp';}else{location.href='report.jsp';}" >게시판</a>
-<%
-			}
-%></li>
+							<li><a href="board/list.jsp">게시판</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="report.jsp" class="button primary fit">신고하기</a></li>
 						</ul>
 					</nav>
+
 
 				<!-- Main -->
 					<div id="main" class="alt">
@@ -101,32 +94,7 @@ if (session.getAttribute("sessionId") != null) {
 								</div>
 							</section>
 					</div>
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="reportPro.jsp">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">이름</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">이메일</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="content">신고 내용</label>
-											<textarea name="content" id="content" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="보내기" class="primary" /></li>
-										<li><input type="reset" value="지우기" /></li>
-									</ul>
-								</form>
-							</section>
-						
+									
 								<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>

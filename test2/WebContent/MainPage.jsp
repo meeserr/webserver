@@ -1,5 +1,3 @@
-<%@page import="com.test2.ReportBean"%>
-<%@page import="com.test2.ReportDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
@@ -11,13 +9,6 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	
-	<%
-	int num=1;
-	ReportDao reportDao = new ReportDao();
-	ReportBean reportBean = reportDao.getReport(num);
-	
-	%>
 	
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -49,7 +40,7 @@ if (session.getAttribute("sessionId") != null) {
 %>	</li>
 						</ul>
 						<ul class="actions stacked">
-							<li><a href="report.jsp" class="button primary fit">신고하기</a></li>
+							<li><a href="report.jsp" class="button primary fit">사고신고</a></li>
 							<li><a href="LoginForm.jsp" class="button primary fit">로그인</a></li>
 						</ul>
 					</nav>
@@ -64,17 +55,7 @@ if (session.getAttribute("sessionId") != null) {
 								<p>재난대응 절차와 조치 등 관련 사항을 숙지하여 재난 시에 피해를 방지하거나 줄여 생명과 재산을 보호해야 합니다.</p>
 							</div>
 							<br>
-							<div class="report">
 							
-								<center>
-								<h2 id="content" style = "color:red;">
-								알림 : 
-								<%=reportDao.getReport(num).getContent()%>  
-								</h2>
-								</center>
-							
-								
-							</div>
 						</div>
 					</section>
 
