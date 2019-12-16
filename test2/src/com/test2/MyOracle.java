@@ -12,7 +12,7 @@ public class MyOracle {
 	public static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
 	
 	// DB 연결정보
-	public static final String URL = "jdbc:mysql://127.0.0.1:3306/board?"+"useUnicode=true&characterEncoding=euckr";
+	public static final String URL = "jdbc:mysql://192.168.0.1:3306/board?"+"useUnicode=true&characterEncoding=euckr";
 	public static final String USER = "root";
 	public static final String PWD = "alfks4874";
 	
@@ -20,7 +20,7 @@ public class MyOracle {
 	public static Connection getConnection() throws Exception {
 		Connection con = null;
 		// DB 연결정보
-		final String URL = "jdbc:mysql://127.0.0.1:3306/board?"+"useUnicode=true&characterEncoding=euckr";
+		final String URL = "jdbc:mysql://192.168.0.1:3306/board?"+"useUnicode=true&characterEncoding=euckr";
 		final String USER = "root";
 		final String PWD = "alfks4874";
 		
